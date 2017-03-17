@@ -36,7 +36,7 @@ function makeMiddleEarth() {
     article.appendChild(h1);
     middleEarth.appendChild(article);
     
-    console.log(middleEarth);
+    //console.log(middleEarth);
   }
   // inside each article tag include an h1 with the name of the land
   
@@ -60,7 +60,7 @@ function makeHobbits() {
     unordered.appendChild(list);
     //.appendChild(unordered);
     //body.appendChild(middleEarth);
-    console.log(unordered);
+    //console.log(unordered);
   }
   var theshire = document.querySelector("article");
   theshire.appendChild(unordered);
@@ -84,7 +84,7 @@ function keepItSecretKeepItSafe() {
   // add the ring as a child of Frodo
   var frodo = document.querySelector("li");
   frodo.appendChild(div);
-  console.log(frodo);
+  //console.log(frodo);
 }
 
 keepItSecretKeepItSafe();
@@ -98,10 +98,11 @@ function makeBuddies() {
   var friends = document.createElement("ul");
   for (i = 0; i < buddies.length; i++) {
     var buddylist = document.createElement("li");
+    buddylist.className = "frienzies";
     buddylist.innerHTML = buddies[i];
     friends.appendChild(buddylist);
     aside.appendChild(friends);
-    console.log(friends);
+    //console.log(friends);
   }
 
   // insert your aside as a child element of rivendell
@@ -115,8 +116,9 @@ makeBuddies();
 
 function beautifulStranger() {
   // change the 'Strider' textnode to 'Aragorn'
+  document.getElementsByClassName("frienzies")[3].innerHTML = "Aragorn";
 }
-
+beautifulStranger();
 
 // Part 6
 
