@@ -35,12 +35,13 @@ function makeMiddleEarth() {
     h1.innerHTML = lands[i];
     article.appendChild(h1);
     middleEarth.appendChild(article);
-    body.appendChild(middleEarth);
+    
     console.log(middleEarth);
   }
   // inside each article tag include an h1 with the name of the land
-
+  
   // append middle-earth to your document body
+  body.appendChild(middleEarth);
 }
 
 makeMiddleEarth();
@@ -49,7 +50,6 @@ makeMiddleEarth();
 // Part 2
 
 function makeHobbits() {
-    makeMiddleEarth();
   // display an unordered list of hobbits in the shire (which is the first article tag on the page)
     var unordered = document.createElement("ul");
   for (var i = 0; i < hobbits.length; i++) {
@@ -73,21 +73,42 @@ makeHobbits();
 
 function keepItSecretKeepItSafe() {
   // create a div with an id of 'the-ring'
+  var div = document.createElement("div");
+  div.setAttribute("id" , "the-ring");
   // give the div a class of 'magic-imbued-jewelry'
+  div.setAttribute("class", "magic-imbued-jewelry");
   // add an event listener so that when a user clicks on the ring, the nazgulScreech function (provided) is invoked
+  div.addEventListener('click', function() {
+    nazgulScreech();
+  });
   // add the ring as a child of Frodo
+  var frodo = document.querySelector("li");
+  frodo.appendChild(div);
+  console.log(frodo);
 }
 
-
+keepItSecretKeepItSafe();
 // Part 4
 
 
 function makeBuddies() {
   // create an aside tag
+  var aside = document.createElement("aside");
   // attach an unordered list of the 'buddies' in the aside
-  // insert your aside as a child element of rivendell
-}
+  var friends = document.createElement("ul");
+  for (i = 0; i < buddies.length; i++) {
+    var buddylist = document.createElement("li");
+    buddylist.innerHTML = buddies[i];
+    friends.appendChild(buddylist);
+    aside.appendChild(friends);
+    console.log(friends);
+  }
 
+  // insert your aside as a child element of rivendell
+  var rivendell = document.querySelectorAll("article")[1];
+  rivendell.appendChild(friends);
+}
+makeBuddies();
 
 // Part 5
 
