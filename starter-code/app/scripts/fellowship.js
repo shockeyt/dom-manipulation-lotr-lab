@@ -56,6 +56,7 @@ function makeHobbits() {
     
     var list = document.createElement("li");
     list.className = "hobbit";
+    //list.id = "group";
     list.innerHTML = hobbits[i];
     unordered.appendChild(list);
     //.appendChild(unordered);
@@ -124,23 +125,48 @@ beautifulStranger();
 
 function leaveTheShire() {
   // assemble the hobbits and move them to Rivendell
-  
+  var kids = document.getElementsByClassName("hobbit");
+  for (i = 0; i <kids.length; i++) {
+      console.log([i]);
+  }
   var leaving = document.querySelectorAll("article")[1];
-  var moving = document.getElementsByClassName("li");
-  leaving.appendChild(hobbit);
+
+  leaving.appendChild(kids);
+  /*  var nahunlist = document.createElement("ul");
+  for (var i = 0; i < hobbits.length; i++) {
+    
+    var blahlist = document.createElement("li");
+    blahlist.className = "killahs";
+    //list.id = "group";
+    blahlist.innerHTML = hobbits[i];
+    nahunlist.appendChild(blahlist);
+    //.appendChild(unordered);
+    //body.appendChild(middleEarth);
+    //console.log(unordered);
+  }
+  var leaving = document.querySelectorAll("article")[1];
+  leaving.appendChild(nahunlist); 
+  var wassup = document.getElementsByTagName */
+
 }
 leaveTheShire();
+
 
 // Part 7
 
 
 function forgeTheFellowShip() {
   // create a new div called 'the-fellowship' within rivendell
+  var thefellowship = document.createElement("div");
+  var pact = document.querySelectorAll("article")[1];
+  pact.appendChild(thefellowship);
+  console.log(thefellowship);
   // add each hobbit and buddy one at a time to 'the-fellowship'
+  var combine = hobbits.concat(buddies);
   // after each character is added make an alert that they have joined your party
 }
 
-
+forgeTheFellowShip();
 // Part 8
 
 
