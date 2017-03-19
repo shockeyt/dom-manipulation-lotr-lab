@@ -96,12 +96,13 @@ keepItSecretKeepItSafe();
 // Part 4
 
 var rivendell = document.querySelectorAll("article")[1];
+var friends = document.createElement("ul");
 
 function makeBuddies() {
   // create an aside tag
   var aside = document.createElement("aside");
   // attach an unordered list of the 'buddies' in the aside
-  var friends = document.createElement("ul");
+  // var friends = document.createElement("ul");
   for (i = 0; i < buddies.length; i++) {
     var buddylist = document.createElement("li");
     buddylist.className = "frienzies";
@@ -145,19 +146,22 @@ leaveTheShire();
 // Part 7
 
 
+
+
 function forgeTheFellowShip() {
   // create a new div called 'the-fellowship' within rivendell
-  /*var thefellowship = document.createElement("div");
-  var pact = document.querySelectorAll("article")[1];
-  pact.appendChild(thefellowship);
-  console.log(thefellowship);
+  var thefellowship = document.createElement("div");
+  rivendell.appendChild(thefellowship);
+  
   // add each hobbit and buddy one at a time to 'the-fellowship'
-  var combine = hobbits.concat(buddies);
+  thefellowship.appendChild(unordered);
+  thefellowship.appendChild(friends);
+  //var combine = hobbits.concat(buddies);
   // after each character is added make an alert that they have joined your party
-*/
+  console.log(thefellowship);
 }
 
-//forgeTheFellowShip();
+forgeTheFellowShip();
 // Part 8
 
 
