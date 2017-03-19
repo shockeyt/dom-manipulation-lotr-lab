@@ -19,6 +19,9 @@ var buddies = [
 var lands = ['The Shire', 'Rivendell', 'Mordor'];
 var body = document.querySelector('body');
 
+var globalrivendell = document.getElementsByTagName("article")[1];
+var globalshire = document.getElementsByTagName("article")[0];
+var globalmordor = document.getElementsByTagName("article")[2];
 
 // Part 1
 
@@ -48,10 +51,11 @@ makeMiddleEarth();
 
 
 // Part 2
+var unordered = document.createElement("ul");
 
 function makeHobbits() {
   // display an unordered list of hobbits in the shire (which is the first article tag on the page)
-    var unordered = document.createElement("ul");
+    
   for (var i = 0; i < hobbits.length; i++) {
     
     var list = document.createElement("li");
@@ -91,6 +95,7 @@ function keepItSecretKeepItSafe() {
 keepItSecretKeepItSafe();
 // Part 4
 
+var rivendell = document.querySelectorAll("article")[1];
 
 function makeBuddies() {
   // create an aside tag
@@ -107,9 +112,10 @@ function makeBuddies() {
   }
 
   // insert your aside as a child element of rivendell
-  var rivendell = document.querySelectorAll("article")[1];
+  
   rivendell.appendChild(friends);
 }
+
 makeBuddies();
 
 // Part 5
@@ -125,28 +131,12 @@ beautifulStranger();
 
 function leaveTheShire() {
   // assemble the hobbits and move them to Rivendell
-  var kids = document.getElementsByClassName("hobbit");
-  for (i = 0; i <kids.length; i++) {
-      console.log([i]);
-  }
-  var leaving = document.querySelectorAll("article")[1];
-
-  leaving.appendChild(kids);
-  /*  var nahunlist = document.createElement("ul");
-  for (var i = 0; i < hobbits.length; i++) {
-    
-    var blahlist = document.createElement("li");
-    blahlist.className = "killahs";
-    //list.id = "group";
-    blahlist.innerHTML = hobbits[i];
-    nahunlist.appendChild(blahlist);
-    //.appendChild(unordered);
-    //body.appendChild(middleEarth);
-    //console.log(unordered);
-  }
-  var leaving = document.querySelectorAll("article")[1];
-  leaving.appendChild(nahunlist); 
-  var wassup = document.getElementsByTagName */
+  // var kids = document.getElementsByTagName(".hobbit");
+  // var rivendellnew = document.querySelectorAll("article")[1];
+  // console.log(kids);
+  // rivendellnew.appendChild(kids);
+  
+  rivendell.appendChild(unordered);
 
 }
 leaveTheShire();
@@ -157,16 +147,17 @@ leaveTheShire();
 
 function forgeTheFellowShip() {
   // create a new div called 'the-fellowship' within rivendell
-  var thefellowship = document.createElement("div");
+  /*var thefellowship = document.createElement("div");
   var pact = document.querySelectorAll("article")[1];
   pact.appendChild(thefellowship);
   console.log(thefellowship);
   // add each hobbit and buddy one at a time to 'the-fellowship'
   var combine = hobbits.concat(buddies);
   // after each character is added make an alert that they have joined your party
+*/
 }
 
-forgeTheFellowShip();
+//forgeTheFellowShip();
 // Part 8
 
 
