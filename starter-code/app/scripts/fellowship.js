@@ -158,19 +158,26 @@ function forgeTheFellowShip() {
   thefellowship.appendChild(friends);
   //var combine = hobbits.concat(buddies);
   // after each character is added make an alert that they have joined your party
-  console.log(thefellowship);
+  // console.log(thefellowship);
 }
 
 forgeTheFellowShip();
 // Part 8
 
+var gandalf = document.getElementsByClassName("frienzies")[0];
 
 function theBalrog() {
   // change the 'Gandalf' textNode to 'Gandalf the White'
+  document.getElementsByClassName("frienzies")[0].innerHTML = "Gandalf the Grey";
   // apply style to the element
+  //var gandalf = document.getElementsByClassName("frienzies")[0];
   // make the background 'white', add a grey border
+  gandalf.style.backgroundColor = "white";
+  gandalf.style.border = "thick solid grey";
+  // console.log(gandalf);
 }
 
+theBalrog();
 
 // Part 9
 
