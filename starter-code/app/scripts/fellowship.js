@@ -19,9 +19,9 @@ var buddies = [
 var lands = ['The Shire', 'Rivendell', 'Mordor'];
 var body = document.querySelector('body');
 
-var globalrivendell = document.getElementsByTagName("article")[1];
-var globalshire = document.getElementsByTagName("article")[0];
-var globalmordor = document.getElementsByTagName("article")[2];
+// var globalrivendell = document.getElementsByTagName("article")[1];
+// var globalshire = document.getElementsByTagName("article")[0];
+// var globalmordor = document.getElementsByTagName("article")[2];
 
 // Part 1
 
@@ -75,6 +75,7 @@ function makeHobbits() {
 makeHobbits();
 
 // Part 3
+var frodo = document.querySelector("li");
 
 function keepItSecretKeepItSafe() {
   // create a div with an id of 'the-ring'
@@ -87,7 +88,7 @@ function keepItSecretKeepItSafe() {
     nazgulScreech();
   });
   // add the ring as a child of Frodo
-  var frodo = document.querySelector("li");
+  // var frodo = document.querySelector("li");
   frodo.appendChild(div);
   //console.log(frodo);
 }
@@ -156,8 +157,14 @@ function forgeTheFellowShip() {
   // add each hobbit and buddy one at a time to 'the-fellowship'
   thefellowship.appendChild(unordered);
   thefellowship.appendChild(friends);
+  var forge = thefellowship.querySelectorAll("li");
   //var combine = hobbits.concat(buddies);
   // after each character is added make an alert that they have joined your party
+  // alert(unordered.innerHTML + " they've joined the party");
+  for (var i = 0; i < forge.length; i++) {
+    
+    alert(forge[i].innerText + " have joined the party");
+  }
   // console.log(thefellowship);
 }
 
@@ -195,11 +202,25 @@ hornOfGondor();
 
 // Part 10
 
+var mordor = document.querySelectorAll("article")[2];
+var mountdoom = document.createElement("div");
+mountdoom.id = "mount-doom";
+mordor.appendChild(mountdoom);
+
 function itsDangerousToGoAlone(){
   // take Frodo and Sam out of the fellowship and move them to Mordor
-  // add a div with an id of 'mount-doom' to Mordor
-}
+  
 
+  mordor.appendChild(frodo);
+  var sam = document.querySelectorAll("li")[0];
+  mordor.appendChild(sam);
+  // add a div with an id of 'mount-doom' to Mordor
+  
+
+
+}
+console.log(mordor);
+itsDangerousToGoAlone();
 
 // Part 11
 
